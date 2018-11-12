@@ -1,0 +1,71 @@
+/*
+  Theme Name: TheEvent
+  Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+  Author: BootstrapMade.com
+  License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+body {
+  background: #fff;
+  color: #2f3138;
+  font-family: "Open Sans", sans-serif;
+}
+body, html {
+  height: 100%;
+}
+
+/* ============================================================
+                BACKGROUND COVER
+============================================================ */
+.bg-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+#logo{
+  padding: 0;
+  margin: 0;
+  max-height: 40px;
+}
+
+/* ============================================================
+                HOME COVER
+============================================================ */
+#home-page {
+  height: 100%;
+}
+
+.home-cover {
+  background-image: url(../img/intro-bg.jpg);
+  height: 100%;
+  position: fixed;
+  width: 100%;
+}
+.home-cover::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+}
+.home-content-box {
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+.home-content-inner {
+  display: table-cell;
+  vertical-align: middle;
+  text-align : center;
+  position: relative;
+  z-index: 100;
+}
+
+
