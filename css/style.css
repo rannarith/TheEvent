@@ -47,10 +47,11 @@ body, html {
 }
 
 .home-cover {
-  background-image: url(../img/intro-bg.jpg);
+  background-image: url("../img/intro-bg.jpg");
   height: 100%;
-  position: fixed;
   width: 100%;
+  position : absolute;
+  overflow: hidden;
 }
 .home-cover::before {
   content: "";
@@ -58,6 +59,7 @@ body, html {
   width: 100%;
   background: rgba(0,0,0,0.7);
   position: absolute;
+  /* z-index: 100; */
 }
 .home-content-box {
   height: 100%;
@@ -93,18 +95,89 @@ body, html {
   color: #ebebeb;
   font-weight: 700;
   font-size: 14px; 
+  position: relative;
+  display: block;
+  padding: 5px 10px;
+  margin: 0px 5px;
+  transition: .5s;
+  z-index: 100;
 }
 
-.navbar-nav a{
-  margin: 0px 5px;
-}
-ul.navbar-nav li.nav-item a.nav-link::after {
+
+.navbar-light ul.navbar-nav li.nav-item a.nav-link::before {
   content: '' ;
-  height: 3px;
   width: 100%;
-  background: red;
+  height: 100%;
   position: absolute;
+  border-bottom: 2px solid #f82249;
+  top:0;
+  left: 0;
+  transform: translateX(-20px);
+    transition: .5s;
+    opacity: 0;
+    z-index: 100;
+  }
+.navbar-light ul.navbar-nav li.nav-item a.nav-link:hover::before {
+  transform: translateX(0px);
+  opacity: 1;
 }
+.navbar-light ul.navbar-nav li.nav-item.active a.nav-link::before,
+.navbar-light ul.navbar-nav li.nav-item a.nav-link.btn::before {
+  display: none;
+}
+
+.navbar-light ul.navbar-nav li.active a.nav-link {
+  border-bottom: 2px solid #f82249;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: translateX(0px);
+  /* position: relative; */
+  color:black;
+  text-align:center;
+}
+
+.navbar-light ul.navbar-nav li.nav-item a.nav-link.btn {
+  border-radius: 50px;
+}
+.navbar-light ul.navbar-nav li.nav-item a.nav-link.btn.btn-primary {
+  background: #f82249;
+  padding : 5px 20px;
+  border: 1px solid #f82249;
+}
+.navbar-light ul.navbar-nav li.nav-item a.nav-link.btn.btn-primary:hover {
+  border: 1px solid #f82249;
+  padding : 5px 20px;
+  background: transparent;
+}
+
+.home-content-inner a.play-btn {
+  width: 94px;
+  height: 94px;
+  background: #f82249;
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  margin: 0 50%;
+}
+
+.home-content-inner .play-btn::before {
+  content: '';
+  width: 120px;
+  height: 120px;
+  background: #000;
+  position: absolute;
+  border-radius: 50%;
+  left: -15%;
+  top: -15%;
+  opacity: .4;
+  z-index: -100;
+}
+
+
+
+
 
 
 
